@@ -13,14 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20141124135417) do
 
-  create_table "courses", force: true do |t|
+  create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "registrations", force: true do |t|
+  create_table "registrations", force: :cascade do |t|
     t.integer  "course_id"
     t.string   "full_name"
     t.string   "company"
